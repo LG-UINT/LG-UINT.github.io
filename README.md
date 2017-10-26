@@ -1,2 +1,2 @@
 # LG-UINT.github.io
-Homapage
+Welcome to my Github
