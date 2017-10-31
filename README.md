@@ -18,6 +18,16 @@
     cd vmware-tools-distrib/
     ./vmware-install.pl
     ```
+    --> 一路回车，看到Enjoy， --the VMware team --> 删除源文件和解压缩后的文件 -->
+    ```Bash
+    rm VMwareTools-10.1.6-5214329.tar.gz
+    rm -rf vmware-tools-distrib/
+    ```
+    * 更新已安装的软件
+    ```Bash
+    sudo apt-get dist-upgrade
+    ```
+    
     
     
   
