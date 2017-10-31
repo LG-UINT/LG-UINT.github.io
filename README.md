@@ -2,10 +2,10 @@
 
   根据自己最近看到的这篇文章[http://gnuarmeclipse.github.io](http://gnuarmeclipse.github.io) ，记录下在Linux下配置GNU MCU Eclipse：<br>
   * 目的： 在Ubuntu下实现`STM32CubeMX`和`Eclipse`使用和调试
-  * 环境： 基于 VMware Workstations 12 Pro 英文版 下 `Ubuntu 16.04 LTS` 英文版
+  * 环境： 基于 VMware Workstations 12 Pro 英文版 下 `Ubuntu 16.04 LTS 64 bit` 英文版
   
 ## 前期Linux准备工作
-  * VMware下安装`Ubuntu 16.04 LTS` （这里不做详细步骤记录，推荐使用Vmware Workstations 12）
+  * VMware下安装`Ubuntu 16.04 LTS 64 bit` （推荐安装Ubuntu 64 bit，不然后面安装包会出现异常导致安装失败，这里不做详细步骤记录。）
   * Linux基本配置和指令，请参考[http://blog.csdn.net/zhengyangliu123/article/details/54780835](http://blog.csdn.net/zhengyangliu123/article/details/54780835) ，这位博主很有耐心，步骤详尽，且时间很近，可参考性较高。<br>
   这里列出我使用的几个配置：<br>
     * 安装VMware tools 以实现主机和虚拟机间拖拽文件，自动调整分辨率等功能：<br>
@@ -27,6 +27,17 @@
     ```Bash
     sudo apt-get dist-upgrade
     ```
+    * 其他关于语言和输入法的设置[链接](http://blog.csdn.net/zhengyangliu123/article/details/54780835)中的每个章节都有配图步骤。
+    
+## 下载二进制文件（Download the binary files）
+ * Tips:根据作者[http://gnuarmeclipse.github.io/downloads](http://gnuarmeclipse.github.io/downloads) 提到两种下载途径，一个是自动，另一个是手动。这里作者推荐在手动在`GitHub Releases`下载。
+ * 手动下载二进制文件：(在每个对应的repository当中--> releases page --> latest release --> 找到对应的版本)<br>
+    * Plug-ins(releases)： [gnuarmeclipse/eclipse-plugins](https://github.com/gnu-mcu-eclipse/eclipse-plugins)
+    * QEMU（releases）: [gnuarmeclipse/QEMU](https://github.com/gnu-mcu-eclipse/qemu)
+    * OpenOCD (releases): [gnuarmeclipse/OpenOCD](https://github.com/gnu-mcu-eclipse/openocd)
+    
+ 
+  
     
     
     
