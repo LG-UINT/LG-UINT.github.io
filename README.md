@@ -39,8 +39,8 @@
     * QEMU（releases）: [gnuarmeclipse/QEMU](https://github.com/gnu-mcu-eclipse/qemu)
     * OpenOCD (releases): [gnuarmeclipse/OpenOCD](https://github.com/gnu-mcu-eclipse/openocd)
     
-## 安装工具链（ARM，QEMU，OpenOCD）
-  * [工具链下载地址](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads)
+## 安装工具链（ARM，JLINK,QEMU，OpenOCD）
+  * 下载AMR工具链[工具链下载地址](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads)
    
    如果你使用的是32位的Linux就需要安装一些库文件https://gnu-mcu-eclipse.github.io/toolchain/arm/install/
    
@@ -57,6 +57,19 @@
    $ ${HOME}/opt/gcc-arm-none-eabi-6-2017-q2-update/bin/arm-none-eabi-gcc --version
    arm-none-eabi-gcc (GNU Tools for ARM Embedded Processors 6-2017-q2-update) 6.3.1 20170620 (release) [ARM/embedded-6-branch     revision 249437]
    ```
+   * 安装QEMU库
+   ```Bash
+   $ sudo mkdir -p /opt/gnuarmeclipse
+   $ cd /opt/gnuarmeclipse
+   $ sudo tar xvf ~/Downloads/gnuarmeclipse-qemu-debian64-2.8.0-201703022210-head.tgz
+   ```
+   * 测试QEMU启动
+   ```Bash
+   $ ${HOME}/opt/gnuarmeclipse/qemu/2.8.0-201703022210-head/bin/qemu-system-gnuarmeclipse --version
+     GNU ARM Eclipse 64-bits QEMU emulator version 2.8.0 (v2.8.0-644-ge45e0e1-dirty)
+     Copyright (c) 2003-2008 Fabrice Bellard
+   ```
+   
 
 ## 安装JDK 和 Eclipse 
 
