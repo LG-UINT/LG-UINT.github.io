@@ -1,6 +1,7 @@
 # README
 
   根据自己最近看到的这篇文章[http://gnuarmeclipse.github.io](http://gnuarmeclipse.github.io) ，记录下在Linux下配置GNU MCU Eclipse：<br>
+  
   * 目的： 在Ubuntu下实现`STM32CubeMX`和`Eclipse`使用和调试
   * 环境： 基于 VMware Workstations 12 Pro 英文版 下 `Ubuntu 16.04 LTS 64 bit` 英文版
   
@@ -47,19 +48,27 @@
    ```Bash
    $ mkdir -p ${HOME}/opt
    $ cd ${HOME}/opt
-   $ tar xjf ~/Downloads/gcc-arm-none-eabi-6-2017-q1-update-linux.tar.bz2
-   $ chmod -R -w ${HOME}/opt/gcc-arm-none-eabi-6-2017-q1-update
+   $ tar xjf ~/Downloads/gcc-arm-none-eabi-6-2017-q2-update-linux.tar.bz2
+   $ chmod -R -w ${HOME}/opt/gcc-arm-none-eabi-6-2017-q2-update
    ```
 * 测试工具链是否运行（**这里作者强烈建议不要改变安装路径，也不要把工具链添加到用户或者系统的环境变量当中**）
 
    ```Bash
-   $ ${HOME}/opt/gcc-arm-none-eabi-4_8-2014q1/bin/arm-none-eabi-gcc --version
-   arm-none-eabi-gcc (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-branch revision 208322]
+   $ ${HOME}/opt/gcc-arm-none-eabi-6-2017-q2-update/bin/arm-none-eabi-gcc --version
+   arm-none-eabi-gcc (GNU Tools for ARM Embedded Processors 6-2017-q2-update) 6.3.1 20170620 (release) [ARM/embedded-6-branch     revision 249437]
+Copyright (C) 2016 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
    ```
 
 ## 安装JDK 和 Eclipse 
 
 * 安装JDK 
+```Bash
+  $ cd ${HOME}/opt
+  $ tar -zxvf ~/Downloads/jdk-8u151-linux-x64.tar.gz
+```
    
  
   
