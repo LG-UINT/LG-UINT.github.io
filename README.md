@@ -88,7 +88,7 @@
 
 ## 安装JDK,Eclipse和Eclipse plug-ins 
 
-* 安装JDK 
+* 安装JDK [下载链接](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 ```Bash
   $ cd ${HOME}/opt
   $ tar -zxvf ~/Downloads/jdk-8u151-linux-x64.tar.gz
@@ -107,9 +107,22 @@
   建议重新启动虚拟机
   
  * 安装Eclipse cpp (这里不需要多介绍)
+ * 安装Eclipse plug-ins 
+ 步骤：Help --> Install New Software --> Add --> Archive --> 选取之前下的插件文件ilg.gnumcueclipse.repository-4.1.1-201707111115.zip
+ --> 全部安装并重启Eclipse
+ * 根据跟人工作习惯配置Eclipse（可选）
+ [博主推荐的配置](https://gnu-mcu-eclipse.github.io/eclipse/workspace/preferences/)
  
-##
-
+## 配置Devices Package
+  在安装完Eclipse插件以后，在工具栏会出现一个Package的图标。这是需要添加Package的搜索位置：
+  
+  Windwos --> Preferences --> C/C++ --> Packages --> Add --> 新建如下搜索链接
+ 
+  |Define a New Packages Repository | |
+  | ---------- | -------- |
+  | Type | XCDL/CMSIS Pack|
+  | Name | GNU ARM Eclipse |
+  | URL | http://gnuarmeclipse.sourceforge.net/packages/content.xml |
   
    
  
