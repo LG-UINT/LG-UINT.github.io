@@ -139,7 +139,40 @@
   
   运行和Debug方式，按照博主的配置fangfa应该是不会出现问题。
   
-
+## 将STMCubeMX 生成的项目导入上面已经配置好的Eclipse开发环境
+  
+  这个部分之前一直不知道如何实现，导致都是在Windows下Keil做开发。 
+  
+  这里看到一个国外的博主写了个Python 的程序在GitHub分享出来，一条指令就把项目转程Eclipse环境当中。特此感谢这位博主。  [CubeMXImporter](https://github.com/cnoviello/CubeMXImporter)
+  
+  具体的操作方法 ：[详细解释，请仔细阅读](https://www.carminenoviello.com/2015/11/02/quickly-import-stm32cubemx-project-eclipse-project/)
+  
+  同样，我也记录下我觉得需要注意的几个点：
+  1. 创建一个空项目用 Hello World ARM Cortex-M C/C++ Project
+  2. 在 **Folder settings** 页面，Vendor CMSIS name 一栏必须按照规则正确填写，如果你是STM32f1的开发板，就要填写stm32f1xx
+  3. 在 STM32CubeMX 创建项目时候，选择工具链 **SW4STM32**
+  4. 确保你安装了对应的工具包（Python和lxml）
+  5. 在Eclipse刷新下，搞定。
+  ```Python
+  $ python cubemximporter.py <path-to-eclipse-workspace>/EclipseProjectName <path-to-cubemx-out>/CubeMXProjectName
+  ```
+  
+  这里记录下安装对应工具包的指令：
+  ```Bash
+  $sudo apt-get install python-pip
+  $pip install lxml
+  $pip install --upgrade pip
+  ```
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
