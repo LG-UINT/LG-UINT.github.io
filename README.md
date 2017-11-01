@@ -65,6 +65,20 @@
   $ cd ${HOME}/opt
   $ tar -zxvf ~/Downloads/jdk-8u151-linux-x64.tar.gz
 ```
+* 配置JAVA环境变量
+
+  编辑 /etc/profile
+  在文件末尾添加如下内容： <br>
+      export JAVA_HOME=/home/LoginName/opt/jdk1.8.0_151 <br>
+      export JRE_HOME=/home/LoginName/opt/jdk1.8.0_151/jre <br>
+      export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib <br>
+      export PATH=$JAVA_HOME/bin:$PATH <br>
+      
+  使配置生效 <br>
+  source /etc/profile
+
+
+  
    
  
   
