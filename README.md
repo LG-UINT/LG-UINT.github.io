@@ -39,19 +39,19 @@
     * QEMU（releases）: [gnuarmeclipse/QEMU](https://github.com/gnu-mcu-eclipse/qemu)
     * OpenOCD (releases): [gnuarmeclipse/OpenOCD](https://github.com/gnu-mcu-eclipse/openocd)
     
-## 安装ARM工具链
+## 安装工具链（ARM，QEMU，OpenOCD）
   * [工具链下载地址](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads)
    
    如果你使用的是32位的Linux就需要安装一些库文件https://gnu-mcu-eclipse.github.io/toolchain/arm/install/
    
-  * 安装工具链
+  * 安装ARM工具链
    ```Bash
    $ mkdir -p ${HOME}/opt
    $ cd ${HOME}/opt
    $ tar xjf ~/Downloads/gcc-arm-none-eabi-6-2017-q2-update-linux.tar.bz2
    $ chmod -R -w ${HOME}/opt/gcc-arm-none-eabi-6-2017-q2-update
    ```
-* 测试工具链是否运行（**这里作者强烈建议不要改变安装路径，也不要把工具链添加到用户或者系统的环境变量当中**）
+  * 测试工具链是否运行（**这里作者强烈建议不要改变安装路径，也不要把工具链添加到用户或者系统的环境变量当中**）
 
    ```Bash
    $ ${HOME}/opt/gcc-arm-none-eabi-6-2017-q2-update/bin/arm-none-eabi-gcc --version
@@ -75,8 +75,10 @@
       export PATH=$JAVA_HOME/bin:$PATH <br>
       
   使配置生效 <br>
-  source /etc/profile
-
+  source /etc/profile <br>
+  建议重新启动虚拟机
+  
+ * 安装Eclipse cpp 
 
   
    
