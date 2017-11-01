@@ -137,7 +137,7 @@
   1. 在例子编译完成以后，请首先确认下在 Window --> MCU --> Global ARM Toolchain Path, Global OpenOCD Path, Global QEMU Path，是否都正确配置
   2. 要在项目属性 --> C/C++ Build --> Settings --> Device --> Boards --> 配置你的Device
   
-  运行和Debug方式，按照博主的配置fangfa应该是不会出现问题。
+  运行和Debug方式，按照博主的配置方法应该是不会出现问题。
   
 ## 将STMCubeMX 生成的项目导入上面已经配置好的Eclipse开发环境
   
