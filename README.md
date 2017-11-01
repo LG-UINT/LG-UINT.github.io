@@ -32,7 +32,7 @@
     
 ## 下载二进制文件（Download the binary files）
 
-* Tips:根据作者[http://gnuarmeclipse.github.io/downloads](http://gnuarmeclipse.github.io/downloads) 提到两种下载途径，一个是自动，另一个是手动。这里博主推荐在手动在**GitHub Releases**下载。
+* Tips:根据博主[http://gnuarmeclipse.github.io/downloads](http://gnuarmeclipse.github.io/downloads) 提到两种下载途径，一个是自动，另一个是手动。这里博主推荐在手动在**GitHub Releases**下载。
 
 * 手动下载二进制文件：(在每个对应的repository当中--> releases page --> latest release --> 找到对应的版本)<br>
     * Plug-ins(releases)： [gnuarmeclipse/eclipse-plugins](https://github.com/gnu-mcu-eclipse/eclipse-plugins)
