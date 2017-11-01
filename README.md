@@ -69,9 +69,24 @@
      GNU ARM Eclipse 64-bits QEMU emulator version 2.8.0 (v2.8.0-644-ge45e0e1-dirty)
      Copyright (c) 2003-2008 Fabrice Bellard
    ```
-   
+   * 安装OpenOCD(如果调试工具不是JLink，需要安装OpenOCD)
+   ```Bash
+   $ sudo mkdir -p /opt/gnuarmeclipse
+   $ cd /opt/gnuarmeclipse
+   $ sudo tar -xvf ~/Downloads/gnu-mcu-eclipse-openocd-0.10.0-4-20171004-0812-dev-debian64.tgz 
+   ```
+   * 测试OpenOCD启动
+   ```Bash
+   $ cd ~
+   $ cd opt/gnuarmeclipse/gnu-mcu-eclipse/openocd/0.10.0-4-20171004-0812-dev/bin
+   $ ./openocd --version
+     GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00218-gda43038f (2017-10-04-10:24)
+     Licensed under GNU GPL v2
+   ```
+   * 安装JLink [驱动链接](https://www.segger.com/downloads/jlink#J-LinkSoftwareAndDocumentationPack) <br>
+   如果你使用的STlink，可以在上面链接最后的位置找到对应的软件STlink转JLink的软件和教程（ST-Link Reflash Utility）
 
-## 安装JDK 和 Eclipse 
+## 安装JDK,Eclipse和Eclipse plug-ins 
 
 * 安装JDK 
 ```Bash
@@ -91,7 +106,9 @@
   source /etc/profile <br>
   建议重新启动虚拟机
   
- * 安装Eclipse cpp 
+ * 安装Eclipse cpp (这里不需要多介绍)
+ 
+##
 
   
    
