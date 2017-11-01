@@ -51,7 +51,7 @@
    $ tar xjf ~/Downloads/gcc-arm-none-eabi-6-2017-q2-update-linux.tar.bz2
    $ chmod -R -w ${HOME}/opt/gcc-arm-none-eabi-6-2017-q2-update
    ```
-  * 测试工具链是否运行（**这里作者强烈建议不要改变安装路径，也不要把工具链添加到用户或者系统的环境变量当中**）
+  * 测试工具链是否运行（**这里博主强烈建议不要改变安装路径，也不要把工具链添加到用户或者系统的环境变量当中**）
 
    ```Bash
    $ ${HOME}/opt/gcc-arm-none-eabi-6-2017-q2-update/bin/arm-none-eabi-gcc --version
@@ -123,6 +123,31 @@
   | Type | XCDL/CMSIS Pack|
   | Name | GNU ARM Eclipse |
   | URL | http://gnuarmeclipse.sourceforge.net/packages/content.xml |
+  
+  然后点击Package图标，第一次打开是No packages,点击中间窗口右上方最小化左边的黄色双箭头图标，搜索Package。这里需要的时间比较久，请耐心等待。（中途可能会出现Read error，如果几次Retry之后都不行，请Ignore）
+  
+  [Packs manager](https://gnu-mcu-eclipse.github.io/plugins/packs-manager/) 这里博主详细有解释，如果根据你的想要模拟的硬件（QEMU）和实际开发硬件，如何安装和卸载对应的Packs。
+  
+  为了能够完成下一章节关于硬件模拟测试教程，建议下载STMicroelectronics--> STM32F4 Series --> keil --> STM32F4xx_DSP --> 2.11.0(449MB) --> 右键 Install （这是我到目前记录时候，看到的最新版本。）
+  
+## 基于模拟硬件的测试
+  这里博主模拟STM32F4的Discovy开发板上闪灯例程： [模拟Blinky例程](https://gnu-mcu-eclipse.github.io/tutorials/blinky-arm/)
+  
+  我个人在操作完以后，感觉比较重要的点：
+  1. 在例子编译完成以后，请首先确认下在 Window --> MCU --> Global ARM Toolchain Path, Global OpenOCD Path, Global QEMU Path，是否都正确配置
+  2. 要在项目属性 --> C/C++ Build --> Settings --> Device --> Boards --> 配置你的Device
+  
+  运行和Debug方式，按照博主的配置fangfa应该是不会出现问题。
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
   
    
  
