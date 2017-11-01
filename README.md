@@ -40,7 +40,7 @@
     * OpenOCD (releases): [gnuarmeclipse/OpenOCD](https://github.com/gnu-mcu-eclipse/openocd)
     
 ## 安装工具链（ARM，JLINK,QEMU，OpenOCD）
-  * 下载AMR工具链[工具链下载地址](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads)
+  * 下载ARM工具链[工具链下载地址](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads)
    
    如果你使用的是32位的Linux就需要安装一些库文件https://gnu-mcu-eclipse.github.io/toolchain/arm/install/
    
