@@ -11,21 +11,21 @@
     * 安装VMware tools 以实现主机和虚拟机间拖拽文件，自动调整分辨率等功能：<br>
     下拉菜单`VM` --> `Install VMware tools` --> Ubuntu 提示有磁盘插入 --> 打开Terminal（Ctrl+Alt+T）
     ```Bash
-    cd /media/LoginName/VMware\ Tools/
-    cp VVMwareTools-10.1.6-5214329.tar.gz /home/LoginName/
-    cd ~
-    tar -zxvf VVMwareTools-10.1.6-5214329.tar.gz
-    cd vmware-tools-distrib/
-    ./vmware-install.pl
+    $ cd /media/LoginName/VMware\ Tools/
+    $ cp VVMwareTools-10.1.6-5214329.tar.gz /home/LoginName/
+    $ cd ~
+    $ tar -zxvf VVMwareTools-10.1.6-5214329.tar.gz
+    $ cd vmware-tools-distrib/
+    $ ./vmware-install.pl
     ```
     --> 一路回车，看到Enjoy， --the VMware team --> 删除源文件和解压缩后的文件 -->
     ```Bash
-    rm VMwareTools-10.1.6-5214329.tar.gz
-    rm -rf vmware-tools-distrib/
+    $ rm VMwareTools-10.1.6-5214329.tar.gz
+    $ rm -rf vmware-tools-distrib/
     ```
     * 更新已安装的软件
     ```Bash
-    sudo apt-get dist-upgrade
+    $ sudo apt-get dist-upgrade
     ```
     * 其他关于语言和输入法的设置[链接](http://blog.csdn.net/zhengyangliu123/article/details/54780835)中的每个章节都有配图步骤。
     
@@ -36,6 +36,24 @@
     * QEMU（releases）: [gnuarmeclipse/QEMU](https://github.com/gnu-mcu-eclipse/qemu)
     * OpenOCD (releases): [gnuarmeclipse/OpenOCD](https://github.com/gnu-mcu-eclipse/openocd)
     
+## 安装ARM工具链
+   * [工具链下载地址](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads)
+   
+   如果你使用的是32位的Linux就需要安装一些库文件https://gnu-mcu-eclipse.github.io/toolchain/arm/install/
+   * 安装工具链
+   ```Bash
+   $ mkdir -p ${HOME}/opt
+   $ cd ${HOME}/opt
+   $ tar xjf ~/Downloads/gcc-arm-none-eabi-6-2017-q1-update-linux.tar.bz2
+   $ chmod -R -w ${HOME}/opt/gcc-arm-none-eabi-6-2017-q1-update
+   ```
+   * 测试工具链是否运行（**这里作者强烈建议不要改变安装路径，也不要把工具链添加到用户或者系统的环境变量当中**）
+   ```Bash
+   $ ${HOME}/opt/gcc-arm-none-eabi-4_8-2014q1/bin/arm-none-eabi-gcc --version
+   arm-none-eabi-gcc (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-branch revision 208322]
+   ```
+   
+   
  
   
     
