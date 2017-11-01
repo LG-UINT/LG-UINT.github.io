@@ -30,29 +30,36 @@
     * 其他关于语言和输入法的设置[链接](http://blog.csdn.net/zhengyangliu123/article/details/54780835)中的每个章节都有配图步骤。
     
 ## 下载二进制文件（Download the binary files）
- * Tips:根据作者[http://gnuarmeclipse.github.io/downloads](http://gnuarmeclipse.github.io/downloads) 提到两种下载途径，一个是自动，另一个是手动。这里作者推荐在手动在`GitHub Releases`下载。
- * 手动下载二进制文件：(在每个对应的repository当中--> releases page --> latest release --> 找到对应的版本)<br>
+
+* Tips:根据作者[http://gnuarmeclipse.github.io/downloads](http://gnuarmeclipse.github.io/downloads) 提到两种下载途径，一个是自动，另一个是手动。这里作者推荐在手动在`GitHub Releases`下载。
+
+* 手动下载二进制文件：(在每个对应的repository当中--> releases page --> latest release --> 找到对应的版本)<br>
     * Plug-ins(releases)： [gnuarmeclipse/eclipse-plugins](https://github.com/gnu-mcu-eclipse/eclipse-plugins)
     * QEMU（releases）: [gnuarmeclipse/QEMU](https://github.com/gnu-mcu-eclipse/qemu)
     * OpenOCD (releases): [gnuarmeclipse/OpenOCD](https://github.com/gnu-mcu-eclipse/openocd)
     
 ## 安装ARM工具链
-   * [工具链下载地址](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads)
+* [工具链下载地址](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads)
    
    如果你使用的是32位的Linux就需要安装一些库文件https://gnu-mcu-eclipse.github.io/toolchain/arm/install/
-   * 安装工具链
+   
+* 安装工具链
    ```Bash
    $ mkdir -p ${HOME}/opt
    $ cd ${HOME}/opt
    $ tar xjf ~/Downloads/gcc-arm-none-eabi-6-2017-q1-update-linux.tar.bz2
    $ chmod -R -w ${HOME}/opt/gcc-arm-none-eabi-6-2017-q1-update
    ```
-   * 测试工具链是否运行（**这里作者强烈建议不要改变安装路径，也不要把工具链添加到用户或者系统的环境变量当中**）
+* 测试工具链是否运行（**这里作者强烈建议不要改变安装路径，也不要把工具链添加到用户或者系统的环境变量当中**）
+
    ```Bash
    $ ${HOME}/opt/gcc-arm-none-eabi-4_8-2014q1/bin/arm-none-eabi-gcc --version
    arm-none-eabi-gcc (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-branch revision 208322]
    ```
-   
+
+## 安装JDK 和 Eclipse 
+
+* 安装JDK 
    
  
   
